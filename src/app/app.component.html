@@ -1,7 +1,9 @@
 <div class="container">
   <h1>Angular Components</h1>
 
-  <app-post-form></app-post-form>
+  <app-post-form
+    (onAdd)="updatePosts($event)"
+  ></app-post-form>
 
   <hr />
 
@@ -12,7 +14,5 @@
 
 
 </div>
-<!--
-компонента post приймає параметр [post] який там стоїть в @Input post,
-туди приєвоюється відповідний обєкт,  і параметри передаємо в форматі{{post.key}}
--->
+
+
