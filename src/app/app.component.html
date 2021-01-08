@@ -1,5 +1,18 @@
-<h1>Hello Angular World!</h1>
+<div class="container">
+  <h1>Angular Components</h1>
 
-<p>
-  {{ now | date:'long' | uppercase | lowercase }}
-</p>
+  <app-post-form></app-post-form>
+
+  <hr />
+
+  <app-post
+    *ngFor="let p of posts"
+    [post]="p"
+  ></app-post>
+
+
+</div>
+<!--
+компонента post приймає параметр [post] який там стоїть в @Input post,
+туди приєвоюється відповідний обєкт,  і параметри передаємо в форматі{{post.key}}
+-->
