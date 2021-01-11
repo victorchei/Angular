@@ -1,18 +1,13 @@
-<div class="container">
-  <h1>Angular Components</h1>
+<h1>Hello Angular World!</h1>
 
-  <app-post-form
-    (onAdd)="updatePosts($event)"
-  ></app-post-form>
+<button (click)="backgroundToggle = !backgroundToggle">Toggle</button>
 
-  <hr />
-
-  <app-post
-    *ngFor="let p of posts"
-    [post]="p"
-  ></app-post>
-
+<div [ngStyle]="{
+  width: '200px',
+  height: '200px',
+  borderRadius: '5px',
+  border: '1px solid #ccc',
+  background: backgroundToggle ? 'red' : 'blue'
+}">
 
 </div>
-
-
