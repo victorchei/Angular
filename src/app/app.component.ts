@@ -6,16 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  projectName = 'MY PROJECT'
-  x = 0;
-  constructor() {
+  inputValue = '';
 
-    setInterval( () => {
-      let str: any = this.projectName.toLowerCase().split('');
-      str[this.x] = str[this.x].toUpperCase();
-      this.projectName = str.join('');
-      this.x++;
-      if(this.projectName.length === this.x) this.x = 0
-    }, 1000)
+  onInput(event: any): void {
+    this.inputValue = event.target.value;
+  }
+
+  onBlur(string) {
+    this.inputValue = string
   }
 }
