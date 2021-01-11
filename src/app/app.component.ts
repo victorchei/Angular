@@ -6,13 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  inputValue = '';
+  title = '1';
+  title2 = '2';
 
-  onInput(event: any): void {
-    this.inputValue = event.target.value;
+  onInput(event: any){
+   this.title = event.target.value;
   }
 
-  onBlur(string) {
-    this.inputValue = string
-  }
 }

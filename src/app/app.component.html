@@ -9,11 +9,16 @@
     </ul>
   </div>
 
-<input type="text" (input)="onInput($event)">
-  <p>TEXT: {{inputValue}}</p>
+<input type="text" [value]="title" (input)="onInput($event)">
 
-  <input type="text" (blur)="onBlur(input.value)" #input>
-  <p>TEXT: {{inputValue}}</p>
+  <p>{{title}}</p>
+
+  <input type="text" [(ngModel)]="title2">
+
+  <p>{{title2}}</p>
+
+
+
 
 
 
