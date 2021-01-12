@@ -1,0 +1,10 @@
+<app-post-form (onAdd)="updatePosts($event)" ></app-post-form>
+
+
+
+<app-post *ngFor="let p of posts"
+          [post] = p
+          (onRemove)="removePost($event)"
+></app-post>
+
+

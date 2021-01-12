@@ -1,0 +1,19 @@
+.post{
+  border: 1px dotted gray;
+  width: 500px;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+}
+.text{
+  font-size: 16px;
+}
+button{
+  width: 50px;
+}
